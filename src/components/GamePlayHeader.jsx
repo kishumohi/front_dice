@@ -1,23 +1,31 @@
-import React from "react";
 import styled from "styled-components";
 import NumberBox from "./NumberBox.jsx";
+import { useState } from "react";
 
 function GamePlayHeader() {
+  const arrayNumber = [1, 2, 3, 4, 5, 6];
+  const [selectNum, setSelectNum] = useState();
+
   return (
     <Config className="config">
       <Score className="scored">
-        <h1>0</h1>
+        <h1>{selectNum}</h1>
         <p>TOTAL SCORE</p>
       </Score>
       <DiceSelector>
         <h4>You have not selected any number</h4>
         <div>
-          <NumberBox number="1" />
-          <NumberBox number="2" />
+          {arrayNumber.map((value, i) => (
+            <h1 key={i} onClick={() => setSelectNum(value)}>
+              <NumberBox number={value} getNum={selectNum} />
+            </h1>
+          ))}
+
+          {/* <NumberBox number="2" />
           <NumberBox number="3" />
           <NumberBox number="4" />
           <NumberBox number="5" />
-          <NumberBox number="6" />
+          <NumberBox number="6" /> */}
         </div>
         <p>Select Number</p>
       </DiceSelector>
