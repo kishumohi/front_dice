@@ -1,27 +1,36 @@
 import React from "react";
 import GamePlayHeader from "./GamePlayHeader.jsx";
 import styled from "styled-components";
+import DiceRule from "./DiceRule.jsx";
 
 function GamePlayBody() {
   return (
     <>
-      <GamePlayHeader />
-      <GameplayBody>
-        <img src="dice1.png" alt="dice log" width={250} height={250} />
-        <p>Click on Dice to roll</p>
-        <button>Reset Score</button>
-        <button>Show Rules</button>
-      </GameplayBody>
+      <Gamemain>
+        <GamePlayHeader />
+        <GameplayBody>
+          <img src="dice1.png" alt="dice log" width={250} height={250} />
+          <p>Click on Dice to roll</p>
+          <button>Reset Score</button>
+          <button>Show Rules</button>
+        </GameplayBody>
+        <DiceRule />
+      </Gamemain>
     </>
   );
 }
 
 export default GamePlayBody;
 
+const Gamemain = styled.div`
+  height: 100vh;
+  /* background-color: red; */
+`;
+
 const GameplayBody = styled.div`
-  height: 75vh;
+  /* height: 45vh; */
   display: flex;
-  gap: 15px;
+  gap: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;

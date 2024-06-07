@@ -10,6 +10,7 @@ function GamePlayHeader() {
         <p>TOTAL SCORE</p>
       </Score>
       <DiceSelector>
+        <h4>You have not selected any number</h4>
         <div>
           <NumberBox number="1" />
           <NumberBox number="2" />
@@ -30,11 +31,11 @@ const Config = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  height: 20vh;
+  padding: 8px;
+  /* height: 20vh; */
 `;
 const Score = styled.div`
-  height: 151px;
+  height: 115px;
   width: 135px;
 
   /* max-width: 200px; */
@@ -63,5 +64,9 @@ const DiceSelector = styled.div`
     margin: 20px 0px;
     font-weight: bold;
     /* background-color: green; */
+  }
+  h4 {
+    font-weight: normal;
+    color: red;
   }
 `;
