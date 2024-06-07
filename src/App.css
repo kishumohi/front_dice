@@ -5,6 +5,9 @@
 }
 
 body {
+  max-width: 1180px;
+  /* background-color: aqua; */
+  margin: 0 auto;
   font-family: "Poppins", sans-serif;
   /* background-color: aquamarine; */
 }

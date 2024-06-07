@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import "./App.css";
 import StartGame from "./components/StartGame.jsx";
-
-const Button = styled.button`
-  background-color: red;
-`;
+import { useState } from "react";
+import GamePlayBody from "./components/GamePlayBody.jsx";
 
 function App() {
+  const [ontoggle, setontoggle] = useState(true);
+  // console.log(ontoggle);
+  const ontogglefun = () => {
+    setontoggle((prev) => !prev);
+  };
   return (
     <div>
-      <StartGame />
+      {ontoggle ? <StartGame ontoggle={ontogglefun} /> : <GamePlayBody />}
     </div>
   );
 }

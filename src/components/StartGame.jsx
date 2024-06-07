@@ -3,11 +3,9 @@ import styled from "styled-components";
 import { Button } from "../styled/Button";
 
 const Container = styled.div`
-  max-width: 1180px;
-  /* background-color: aqua; */
   height: 100vh;
   display: flex;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   align-items: center;
 
   .content {
@@ -22,7 +20,7 @@ const Container = styled.div`
   }
 `;
 
-function StartGame() {
+function StartGame({ ontoggle }) {
   return (
     <Container>
       <div>
@@ -30,7 +28,7 @@ function StartGame() {
       </div>
       <div className="content">
         <h1>Dice Game</h1>
-        <Button>Play Game</Button>
+        <Button onClick={ontoggle}>Play Game</Button>
       </div>
     </Container>
   );
