@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import GamePlayHeader from "./GamePlayHeader.jsx";
 import styled from "styled-components";
 import DiceRule from "./DiceRule.jsx";
 
 function GamePlayBody() {
+  const [randomNom, setrandomNom] = useState(1);
+  console.log(randomNom);
+  const RandomNumber = (min, max) => {
+    {
+      let numberis = Math.floor(Math.random() * (max - min + 1) + min);
+      return numberis;
+    }
+  };
   return (
     <>
       <Gamemain>
         <GamePlayHeader />
         <GameplayBody>
-          <img src="dice1.png" alt="dice log" width={250} height={250} />
+          <img
+            src={`dice_${randomNom}.png`}
+            alt="dice log"
+            width={250}
+            height={250}
+          />
           <p>Click on Dice to roll</p>
-          <button>Reset Score</button>
+          <button onClick={() => setrandomNom(RandomNumber(1, 6))}>
+            Reset Score
+          </button>
           <button>Show Rules</button>
         </GameplayBody>
         <DiceRule />
