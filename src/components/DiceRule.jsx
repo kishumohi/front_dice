@@ -20,6 +20,6 @@ export default DiceRule;
 
 const DiceRuleCo = styled.div`
   /* height: 30vh; */
-  /* background-color: #fbf1f1; */
-  padding: 10px;
+  background-color: #fbf1f1;
+  padding: 5px;
 `;

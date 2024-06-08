@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 function NumberBox({ number, getNum }) {
+  // useEffect(() => {
+  //   stchildcmd(2);
+  //   getSelect(childcmd);
+  // }, []);
   return (
     <NumberBxt>
       {number === getNum ? (
